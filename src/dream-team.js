@@ -1,26 +1,34 @@
 const CustomError = require("../extensions/custom-error");
 
-module.exports = function createDreamTeam(Array) {
-  
-    var team = '';
-    let u = typeof(Array)
-  if (u === 'object') {
-      Array = Array.sort()
-      for (let name of Array) {
-      var a = typeof(name);
+module.exports = function createDreamTeam(newArray) {
+  var team = [];
+  let u = typeof( newArray);
+
+  if (Array.isArray(newArray)) {
+      let finalTeam = ''
       
-      if (a === "string" && name !== ' ' ){
-        name = name.trim().slice(0, 1).toUpperCase();
-        team += name
+      var team = [];
+
+      newArray = newArray.reverse()
+      for (let name of newArray) {
+        var type = typeof(name);
       
-      } else {
-        console.log(false)
-        }
-    }
-    return team
+        if (type === "string" && name !== ' ' ){
+          let l = team.length + 1;
+
+          name = name.trim().slice(0, 1).toUpperCase();
+          team.push(name);
+          team = team.sort();
+          
+          for (let x of team) {
+            finalTeam += x;
+            var i = finalTeam.slice(finalTeam.length - l,finalTeam.length)
+          }
+        
+        } 
+      }
+    return i
   } else {
     return false
   }
-  //throw new CustomError('Not implemented');
-  // remove line with error and write your code here
 };
