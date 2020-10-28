@@ -72,7 +72,7 @@ describe('Carbon dating', () => {
           assert.equal(dateSample('2.3428430852333437'), 15349);
           assert.equal(dateSample('7.724878580528199'), 5486);
           assert.equal(dateSample('13.120235263248446'), 1107);
-          assert.equal(dateSample('8.324373471546389'), 4868);
+          assert.equal(dateSample(''), 4868);
           assert.equal(dateSample('1.7062450205046806'), 17970);
           assert.equal(dateSample('1.6311084198720187'), 18342);
           assert.equal(dateSample('5.594044275261709'), 8154);

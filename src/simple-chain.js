@@ -1,7 +1,7 @@
 const CustomError = require("../extensions/custom-error");
 
 const chainMaker = {
- finalChain : [],
+  finalChain : [],
 
   getLength: function() {
     return this.finalChain.length
@@ -31,6 +31,7 @@ const chainMaker = {
     const result = this.finalChain.map(i => `( ${i} )`).join('~~');
     this.finalChain = []
     return result;
+    
   }
 };
 
