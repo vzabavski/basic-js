@@ -4,6 +4,7 @@ const chainMaker = {
   finalChain : [],
 
   getLength: function() {
+    let res = this.finalChain.length;
     return this.finalChain.length
   },
   addLink: function(value) {
@@ -15,6 +16,7 @@ const chainMaker = {
       this.finalChain.splice(position - 1, 1)
       return this;
     } else {
+      this.finalChain = []
       throw Error;
     }
   },
